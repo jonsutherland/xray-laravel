@@ -1,5 +1,5 @@
 {
-    "name": "napp/xray-laravel",
+    "name": "jonsutherland/xray-laravel",
     "description": "AWS X-Ray for Laravel applications.",
     "keywords": [
         "xray",
