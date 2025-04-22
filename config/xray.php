@@ -106,4 +106,14 @@ return [
             'expires' => '',
         ],
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Daemon, only needed if "DaemonSegmentSubmitter" submitter is chosen
+    |--------------------------------------------------------------------------
+    */
+    'daemon' => [
+	    'address' => env('_AWS_XRAY_DAEMON_ADDRESS', '127.0.0.1'),
+	    'port' => env('_AWS_XRAY_DAEMON_PORT', '2000')
+    ],
 ];
