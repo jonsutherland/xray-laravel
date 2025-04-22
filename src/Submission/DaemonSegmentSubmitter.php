@@ -49,7 +49,7 @@ class DaemonSegmentSubmitter implements SegmentSubmitter
     }
 
     /**
-     * @param Segment $segment
+     * @param  Segment  $segment
      * @return void
      */
     public function submitSegment(Segment $segment)

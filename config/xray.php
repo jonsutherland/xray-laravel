@@ -113,7 +113,7 @@ return [
     |--------------------------------------------------------------------------
     */
     'daemon' => [
-	    'address' => env('_AWS_XRAY_DAEMON_ADDRESS', '127.0.0.1'),
-	    'port' => env('_AWS_XRAY_DAEMON_PORT', '2000')
+        'address' => env('_AWS_XRAY_DAEMON_ADDRESS', '127.0.0.1'),
+        'port' => env('_AWS_XRAY_DAEMON_PORT', '2000'),
     ],
 ];
