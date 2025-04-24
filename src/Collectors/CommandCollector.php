@@ -7,15 +7,17 @@ namespace Napp\Xray\Collectors;
 use Illuminate\Console\Events\CommandFinished;
 use Illuminate\Console\Events\CommandStarting;
 use Napp\Xray\Segments\JobSegment;
+use Illuminate\Support\Facades\Log;
 
 class CommandCollector extends EventsCollector
 {
     public function registerEventListeners(): void
     {
         $this->app['events']->listen(CommandStarting::class, function (CommandStarting $event) {
-            if ($this->app->runningInConsole()) {
-                $this->initCliTracer($event->command);
-            }
+            // log running in console
+            Log::info('Running in console: ' . $this->app->runningInConsole());
+
+            $this->initCliTracer($event->command);
             $name = 'Command ' . $event->command;
 
             $this->addCustomSegment(
